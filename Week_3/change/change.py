@@ -2,9 +2,16 @@
 import sys
 
 def get_change(m):
+    coinList=[10,5,1]
+    numCoin=0
+    remainingCoin=m
+    for coin in coinList:
+        numCoin=numCoin+(remainingCoin//coin)
+        remainingCoin=remainingCoin%coin
     #write your code here
-    return m
+    return numCoin
 
 if __name__ == '__main__':
     m = int(sys.stdin.read())
-    print(get_change(m))
+    r=int(m)
+    print(get_change(r))
